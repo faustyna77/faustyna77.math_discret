@@ -14,7 +14,11 @@ const countModulo=()=>
     const numberofmoduloValue = parseInt(numberofmodulo.value);
   
   
-  
+  if(moduloValue===''&& numberofmodulo==='')
+  {
+
+    answer.innerHTML="Nie podałeś liczb!"
+  }
    
     if(moduloValue<numberofmoduloValue)
     {
@@ -30,13 +34,16 @@ const countModulo=()=>
     console.log(moduloValue);
     const result = moduloValue/numberofmoduloValue;
     const reszt=moduloValue-((Math.floor(result))*numberofmoduloValue)
-    answer.innerHTML = 'Wynik to ' + reszt;
+    
+   
     if(numberofmodulo.value==='' && modulon.value==='')
     {
         overview.value=''
+        answer.innerHTML=''
 
     }else{
         overviewFunction();
+        answer.innerHTML = 'Wynik to ' + reszt;
     }
 }
 
